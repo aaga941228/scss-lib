@@ -1,0 +1,28 @@
+{
+  "name": "scss-lib",
+  "version": "1.0.0",
+  "description": "SCSS library",
+  "main": "index.html",
+  "scripts": {
+    "build": "sass scss/_styles.scss styles.css",
+    "build:watch": "sass --watch scss/_styles.scss styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaga941228/scss-lib.git"
+  },
+  "keywords": [
+    "scss",
+    "css"
+  ],
+  "author": "Alan Ayala Galvan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aaga941228/scss-lib/issues"
+  },
+  "homepage": "https://github.com/aaga941228/scss-lib#readme",
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}

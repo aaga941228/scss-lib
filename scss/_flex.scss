@@ -1,0 +1,66 @@
+// display flex
+
+@each $key,
+$value in $breakpoints {
+    @if ($value) {
+        .d-#{$key}-flex {
+            @media (max-width: $value) {
+                display: flex;
+            }
+        }
+    }
+
+    @else {
+        .d-flex {
+            display: flex;
+        }
+    }
+}
+
+// flex direction
+
+@each $direction in $flex-directions {
+
+    @each $key,
+    $value in $breakpoints {
+        @if($value) {
+            .flex-direction-#{$key}-#{$direction} {
+                @media (min-width: $value) {
+                    flex-direction: $direction;
+                }
+
+            }
+        }
+
+        @else {
+            .flex-direction-#{$direction} {
+                flex-direction: $direction;
+
+            }
+        }
+    }
+}
+
+// justify-content
+
+@each $justify in $justify-content {
+
+    @each $key,
+    $value in $breakpoints {
+        @if($value) {
+            .justify-content-#{$key}-#{$justify} {
+                @media (min-width: $value) {
+                    justify-content: $justify;
+                }
+
+            }
+        }
+
+        @else {
+            .justify-content-#{$justify} {
+                justify-content: $justify;
+
+            }
+        }
+    }
+}
