@@ -380,4 +380,15 @@
   background-color: #000;
 }
 
+@font-face {
+  font-family: "Bitter";
+  font-style: normal;
+  src: url("fonts/Bitter-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  src: url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
 /*# sourceMappingURL=styles.css.map */

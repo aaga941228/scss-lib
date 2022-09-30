@@ -2,11 +2,21 @@
 @import "variables";
 @import "colors";
 @import "flex";
+@import "fonts";
 
 .color-gray {
-    color: $gray;
+  color: $gray;
 }
 
 .bg-color-black {
-    background-color: $black;
+  background-color: $black;
 }
+
+@include font-face(Bitter, fonts/Bitter-VariableFont_wght, null, normal, ttf);
+@include font-face(
+  Montserrat,
+  fonts/Montserrat-VariableFont_wght,
+  null,
+  normal,
+  ttf
+);
