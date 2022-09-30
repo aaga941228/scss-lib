@@ -1,12 +1,24 @@
 @import "breakpoints";
 @import "variables";
 @import "colors";
-@import "flex";
 
-.color-gray {
-    color: $gray;
-}
-
-.bg-color-black {
-    background-color: $black;
+@each $css-rule, $css-properties in $css-rules {
+    @each $css-property in $css-properties {
+        @each $breakpoint-key,
+        $breakpoint-value in $breakpoints {
+            @if ($breakpoint-value) {
+                .#{$css-rule}-#{$breakpoint-key}-#{$css-property} {
+                    @media (max-width: $breakpoint-value) {
+                        #{$css-rule}: #{$css-property};
+                    }
+                }
+            }
+        
+            @else {
+                .#{$css-rule}-#{$css-property} {
+                    #{$css-rule}: #{$css-property};
+                }
+            }
+        }
+    }
 }

@@ -4,9 +4,10 @@
   "description": "SCSS library",
   "main": "index.html",
   "scripts": {
-    "build": "sass scss/_styles.scss styles.css",
-    "build:watch": "sass --watch scss/_styles.scss styles.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build:css && npm run build:scss",
+    "build:css": "sass scss/_styles.scss styles.css",
+    "build:scss": "sass scss/_styles.scss styles.css",
+    "build:scss:watch": "sass --watch scss/_styles.scss styles.scss"
   },
   "repository": {
     "type": "git",
