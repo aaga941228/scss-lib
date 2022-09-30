@@ -1,24 +1,31 @@
 @import "breakpoints";
 @import "variables";
 @import "colors";
+@import "fonts";
 
 @each $css-rule, $css-properties in $css-rules {
-    @each $css-property in $css-properties {
-        @each $breakpoint-key,
-        $breakpoint-value in $breakpoints {
-            @if ($breakpoint-value) {
-                .#{$css-rule}-#{$breakpoint-key}-#{$css-property} {
-                    @media (max-width: $breakpoint-value) {
-                        #{$css-rule}: #{$css-property};
-                    }
-                }
-            }
-        
-            @else {
-                .#{$css-rule}-#{$css-property} {
-                    #{$css-rule}: #{$css-property};
-                }
-            }
+  @each $css-property in $css-properties {
+    @each $breakpoint-key, $breakpoint-value in $breakpoints {
+      @if ($breakpoint-value) {
+        .#{$css-rule}-#{$breakpoint-key}-#{$css-property} {
+          @media (max-width: $breakpoint-value) {
+            #{$css-rule}: #{$css-property};
+          }
         }
+      } @else {
+        .#{$css-rule}-#{$css-property} {
+          #{$css-rule}: #{$css-property};
+        }
+      }
     }
+  }
 }
+
+@include font-face(Bitter, fonts/Bitter-VariableFont_wght, null, normal, ttf);
+@include font-face(
+  Montserrat,
+  fonts/Montserrat-VariableFont_wght,
+  null,
+  normal,
+  ttf
+);
