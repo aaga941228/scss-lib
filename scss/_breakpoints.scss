@@ -3,3 +3,36 @@ $sm: 768px;
 $md: 992px;
 $lg: 1200px;
 $xl: 1400px;
+
+$xs-sm: $xs, $sm;
+$xs-md: $xs, $md;
+$xs-lg: $xs, $lg;
+$xs-xl: $xs, $xl;
+$sm-md: $sm, $md;
+$sm-lg: $sm, $lg;
+$sm-xl: $sm, $xl;
+$md-lg: $md, $lg;
+$md-xl: $md, $xl;
+$lg-xl: $lg, $xl;
+
+$min-max-breakpoints: (
+  'xs-sm': $xs-sm,
+  'xs-md': $xs-md,
+  'xs-lg': $xs-lg,
+  'xs-xl': $xs-xl,
+  'sm-md': $sm-md,
+  'sm-lg': $sm-lg,
+  'sm-xl': $sm-xl,
+  'md-lg': $md-lg,
+  'md-xl': $md-xl,
+  'lg-xl': $lg-xl,
+);
+
+$breakpoints: (
+  '': false,
+  'xs': $xs,
+  'sm': $sm,
+  'md': $md,
+  'lg': $lg,
+  'xl': $xl,
+);

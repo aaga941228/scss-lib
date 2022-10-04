@@ -1,0 +1,31 @@
+$flex-direction: (
+    'row': 'row',
+    'column': 'col',
+    'row-reverse': 'row-reverse',
+    'column-reverse': 'col-reverse'
+);
+
+$justify-content: (
+    'flex-start': 'justify-start',
+    'flex-end': 'justify-end',
+    'center': 'justify-center',
+    'space-between': 'justify-between',
+    'space-evenly': 'justify-evenly',
+    'space-around': 'justify-around'
+);
+
+$align-items: (
+    'flex-start': 'align-start',
+    'flex-end': 'align-end',
+    'center': 'align-center',
+    'baseline': 'align-baseline',
+    'stretch': 'align-stretch'
+);
+
+$align-self: (
+    'start': 'self-start',
+    'end': 'self-end',
+    'center': 'self-center',
+    'baseline': 'self-baseline',
+    'stretch': 'self-stretch',
+);

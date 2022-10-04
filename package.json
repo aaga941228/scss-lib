@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run build:css && npm run build:scss",
     "build:css": "sass scss/_styles.scss styles.css",
-    "build:scss": "sass scss/_styles.scss styles.css",
+    "build:scss": "sass scss/_styles.scss styles.scss",
     "build:scss:watch": "sass --watch scss/_styles.scss styles.scss"
   },
   "repository": {

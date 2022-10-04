@@ -1,52 +1,9 @@
-$breakpoints: (
-  '': false,
-  'xs': $xs,
-  'sm': $sm,
-  'md': $md,
-  'lg': $lg,
-  'xl': $xl,
-);
+@import "margins";
+@import "paddings";
+@import "display";
+@import "flex";
 
-$display: //'table', 
-  //'table-cell', 
-  //'table-row',
-  'none',
-  'block',
-  'inline',
-  'inline-block',
-  'grid',
-  'inline-flex'
-  'flex';
-
-$padding: 'auto', '0';
-
-$padding-top: 'auto', '0';
-
-$padding-bottom: 'auto', '0';
-
-$padding-left: 'auto', '0';
-
-$padding-right: 'auto', '0';
-
-$margin: 'auto', '0';
-
-$margin-top: 'auto', '0';
-
-$margin-bottom: 'auto', '0';
-
-$margin-left: 'auto', '0';
-
-$margin-right: 'auto', '0';
-
-$flex-direction: 'row', 'column', 'row-reverse', 'column-reverse';
-
-$justify-content: 'flex-start', 'flex-end', 'center', 'space-between', 'space-evenly', 'space-around';
-
-$align-items: 'flex-start', 'flex-end', 'center', 'baseline', 'stretch';
-
-$align-self: 'start', 'end', 'center', 'baseline', 'stretch';
-
-$css-rules: (
+$rules: (
   'display': $display,
   'padding': $padding,
   'padding-top': $padding-top,

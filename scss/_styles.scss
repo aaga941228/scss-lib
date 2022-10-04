@@ -3,29 +3,57 @@
 @import "colors";
 @import "fonts";
 
-@each $css-rule, $css-properties in $css-rules {
-  @each $css-property in $css-properties {
-    @each $breakpoint-key, $breakpoint-value in $breakpoints {
-      @if ($breakpoint-value) {
-        .#{$css-rule}-#{$breakpoint-key}-#{$css-property} {
-          @media (max-width: $breakpoint-value) {
-            #{$css-rule}: #{$css-property};
+@each $name,
+$properties in $rules {
+
+  @each $property,
+  $alias in $properties {
+
+    @each $bkp-key,
+    $bkp-value in $breakpoints {
+      @if ($bkp-value) {
+        .#{$alias}-#{$bkp-key} {
+          @media (max-width: $bkp-value) {
+            #{$name}: #{$property};
           }
         }
-      } @else {
-        .#{$css-rule}-#{$css-property} {
-          #{$css-rule}: #{$css-property};
+      }
+
+      @else {
+        .#{$alias} {
+          #{$name}: #{$property};
         }
       }
     }
   }
 }
 
+//@each $name,
+//$properties in $rules {
+//
+//  @each $property,
+//  $alias in $properties {
+//
+//    @each $mmb-key,
+//    $mmb-value in $min-max-breakpoints {
+//
+//      @each $breaks in $mmb-value {
+//
+//        @for $i from 1 through length($breaks) {
+//          .#{$alias}-#{$mmb-key} {
+//            @media (min-width: index($breaks, $i)) and (max-width: index($breaks, 1)) {
+//              #{$name}: #{$property};
+//            }
+//          }
+//        }
+//      }
+//    }
+//  }
+//}
+
 @include font-face(Bitter, fonts/Bitter-VariableFont_wght, null, normal, ttf);
-@include font-face(
-  Montserrat,
+@include font-face(Montserrat,
   fonts/Montserrat-VariableFont_wght,
   null,
   normal,
-  ttf
-);
+  ttf);
