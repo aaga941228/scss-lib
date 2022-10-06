@@ -28,28 +28,40 @@ $properties in $rules {
   }
 }
 
-//@each $name,
-//$properties in $rules {
-//
-//  @each $property,
-//  $alias in $properties {
-//
-//    @each $mmb-key,
-//    $mmb-value in $min-max-breakpoints {
-//
-//      @each $breaks in $mmb-value {
-//
-//        @for $i from 1 through length($breaks) {
-//          .#{$alias}-#{$mmb-key} {
-//            @media (min-width: index($breaks, $i)) and (max-width: index($breaks, 1)) {
-//              #{$name}: #{$property};
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//}
+@each $v,
+$combined-rule in $combined-rules {
+
+  @each $alias,
+  $rules in $combined-rule {
+
+    @each $breakpoint-key,
+    $breakpoint-value in $breakpoints {
+
+      @if ($breakpoint-value) {
+        .#{$alias}-#{$breakpoint-key} {
+
+          @media (max-width: $breakpoint-value) {
+
+            @each $rule,
+            $property in $rules {
+              #{$rule}: #{$property};
+            }
+          }
+        }
+      }
+
+      @else {
+        .#{$alias} {
+
+          @each $rule,
+          $property in $rules {
+            #{$rule}: #{$property};
+          }
+        }
+      }
+    }
+  }
+}
 
 @include font-face(Bitter, fonts/Bitter-VariableFont_wght, null, normal, ttf);
 @include font-face(Montserrat,

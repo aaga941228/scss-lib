@@ -1,31 +1,83 @@
 $flex-direction: (
-    'row': 'row',
-    'column': 'col',
-    'row-reverse': 'row-reverse',
-    'column-reverse': 'col-reverse'
+    'row': ('display': 'flex',
+        'flex-direction': 'row'
+    ),
+    'col': ('display': 'flex',
+        'flex-direction': 'col'
+    ),
+    'row-reverse': ('display': 'flex',
+        'flex-direction': 'row'
+    ),
+    'col-reverse': ('display': 'flex',
+        'flex-direction': 'column-reverse'
+    )
 );
 
 $justify-content: (
-    'flex-start': 'justify-start',
-    'flex-end': 'justify-end',
-    'center': 'justify-center',
-    'space-between': 'justify-between',
-    'space-evenly': 'justify-evenly',
-    'space-around': 'justify-around'
+    'justify-start': ('display': 'flex',
+        'justify-content': 'justify-start'
+    ),
+    'justify-end': ('display': 'flex',
+        'justify-content': 'flex-end'
+    ),
+    'justify-center': ('display': 'flex',
+        'justify-content': 'center'
+    ),
+    'justify-between': ('display': 'flex',
+        'justify-content': 'space-between'
+    ),
+    'justify-evenly': ('display': 'flex',
+        'justify-content': 'space-evenly'
+    ),
+    'justify-around': ('display': 'flex',
+        'justify-content': 'space-around'
+    )
 );
 
 $align-items: (
-    'flex-start': 'align-start',
-    'flex-end': 'align-end',
-    'center': 'align-center',
-    'baseline': 'align-baseline',
-    'stretch': 'align-stretch'
+    'align-start': ('display': 'flex',
+        'align-items': 'flex-start'
+    ),
+    'align-end': ('display': 'flex',
+        'align-items': 'flex-end'
+    ),
+    'align-center': ('display': 'flex',
+        'align-items': 'center'
+    ),
+    'align-baseline': ('display': 'flex',
+        'align-items': 'baseline'
+    ),
+    'align-stretch': ('display': 'flex',
+        'align-items': 'stretch'
+    )
 );
 
 $align-self: (
-    'start': 'self-start',
-    'end': 'self-end',
-    'center': 'self-center',
-    'baseline': 'self-baseline',
-    'stretch': 'self-stretch',
+    'self-start': ('display': 'flex',
+        'align-self': 'start'
+    ),
+    'self-end': ('display': 'flex',
+        'align-self': 'end'
+    ),
+    'self-center': ('display': 'flex',
+        'align-self': 'center'
+    ),
+    'self-baseline': ('display': 'flex',
+        'align-self': 'baseline'
+    ),
+    'self-stretch': ('display': 'flex',
+        'align-self': 'stretch'
+    ),
+);
+
+$flex-wrap: (
+    'flex-wrap': ('display': 'flex',
+        'flex-wrap': 'wrap'
+    ),
+    'flex-nowrap': ('display': 'flex',
+        'flex-wrap': 'nowrap'
+    ),
+    'flex-wrap-reverse': ('display': 'flex',
+        'flex-wrap': 'wrap-reverse'
+    ),
 );

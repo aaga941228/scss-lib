@@ -15,8 +15,12 @@ $rules: (
   'margin-bottom': $margin-bottom,
   'margin-left': $margin-left,
   'margin-right': $margin-right,
+);
+
+$combined-rules: (
   'flex-direction': $flex-direction,
   'justify-content': $justify-content,
   'align-items': $align-items,
   'align-self': $align-self,
+  'flex-wrap': $flex-wrap,
 );
